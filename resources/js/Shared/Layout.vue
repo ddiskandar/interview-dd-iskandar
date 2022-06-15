@@ -1,5 +1,5 @@
 <template>
-  <!-- Page Container -->
+    <!-- Page Container -->
     <div id="page-container" class="flex flex-col w-full min-h-screen mx-auto bg-gray-100">
     <!-- Page Header -->
     <header id="page-header" class="flex items-center flex-none bg-white shadow-sm z-1">
@@ -55,7 +55,7 @@
     <main id="page-content" class="flex flex-col flex-auto max-w-full">
         <!-- Page Section -->
         <div class="container p-4 mx-auto xl:max-w-7xl lg:p-8">
-        <slot></slot>
+            <slot></slot>
         </div>
         <!-- END Page Section -->
     </main>
@@ -70,6 +70,6 @@ import { Link } from '@inertiajs/inertia-vue3'
 export default {
   components: {
     Link,
-  }
+  },
 }
 </script>
