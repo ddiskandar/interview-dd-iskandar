@@ -20142,7 +20142,7 @@ var _hoisted_9 = {
   "class": "space-y-6 sm:space-y-0 sm:flex sm:space-x-3"
 };
 var _hoisted_10 = {
-  "class": "flex gap-4"
+  "class": "flex justify-between"
 };
 
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Save changes");
@@ -20252,7 +20252,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     label: "Postal"
   }, null, 8
   /* PROPS */
-  , ["modelValue", "error"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_primary_button, {
+  , ["modelValue", "error"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[9] || (_cache[9] = function () {
+      return $options.destroy && $options.destroy.apply($options, arguments);
+    }),
+    type: "button",
+    "class": "text-red-600"
+  }, " Delete Contact "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_primary_button, {
     loading: $data.form.processing,
     type: "submit"
   }, {
@@ -20264,13 +20270,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["loading"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[9] || (_cache[9] = function () {
-      return $options.destroy && $options.destroy.apply($options, arguments);
-    }),
-    type: "button",
-    "class": "text-red-600"
-  }, " Delete Contact ")])], 32
+  , ["loading"])])], 32
   /* HYDRATE_EVENTS */
   )])])])], 64
   /* STABLE_FRAGMENT */

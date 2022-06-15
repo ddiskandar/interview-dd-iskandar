@@ -30,11 +30,11 @@
                         <text-input v-model="form.country" :error="form.errors.country" class="space-y-1 sm:w-2/3" label="Country" />
                         <text-input v-model="form.postal_code" :error="form.errors.postal_code" class="space-y-1 sm:w-1/3" label="Postal" />
                     </div>
-                    <div class="flex gap-4">
-                        <primary-button :loading="form.processing" type="submit">Save changes</primary-button>
+                    <div class="flex justify-between">
                         <button @click="destroy" type="button" class="text-red-600">
                             Delete Contact
                         </button>
+                        <primary-button :loading="form.processing" type="submit">Save changes</primary-button>
                     </div>
                 </form>
             </div>
