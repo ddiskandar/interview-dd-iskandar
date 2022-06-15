@@ -32,7 +32,7 @@
                     </div>
                     <div class="flex gap-4">
                         <primary-button :loading="form.processing" type="submit">Save changes</primary-button>
-                        <button @click="destroy" class="text-red-600">
+                        <button @click="destroy" type="button" class="text-red-600">
                             Delete Contact
                         </button>
                     </div>

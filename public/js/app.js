@@ -20222,6 +20222,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[9] || (_cache[9] = function () {
       return $options.destroy && $options.destroy.apply($options, arguments);
     }),
+    type: "button",
     "class": "text-red-600"
   }, " Delete Contact ")])], 32
   /* HYDRATE_EVENTS */
@@ -20249,7 +20250,7 @@ var _hoisted_1 = {
   "class": "flex flex-col overflow-hidden bg-white rounded shadow-sm"
 };
 var _hoisted_2 = {
-  "class": "py-4 px-5 lg:px-6 w-full bg-gray-50 sm:flex sm:justify-between sm:items-center"
+  "class": "w-full px-5 py-4 lg:px-6 bg-gray-50 sm:flex sm:justify-between sm:items-center"
 };
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -20257,20 +20258,20 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
   "class": "font-semibold"
 }, " Contacts "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-  "class": "text-gray-500 text-sm"
+  "class": "text-sm text-gray-500"
 }, " Manage all your contact ")], -1
 /* HOISTED */
 );
 
 var _hoisted_4 = {
-  "class": "mt-3 sm:mt-0 text-center sm:text-right"
+  "class": "mt-3 text-center sm:mt-0 sm:text-right"
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   fill: "currentColor",
   viewBox: "0 0 20 20",
   xmlns: "http://www.w3.org/2000/svg",
-  "class": "hi-solid hi-plus inline-block w-4 h-4"
+  "class": "inline-block w-4 h-4 hi-solid hi-plus"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
   "fill-rule": "evenodd",
   d: "M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z",
@@ -20287,7 +20288,7 @@ var _hoisted_7 = {
   "class": "w-full p-5 lg:p-6 grow"
 };
 var _hoisted_8 = {
-  "class": "border border-gray-200 rounded overflow-x-auto min-w-full bg-white"
+  "class": "min-w-full overflow-x-auto bg-white border border-gray-200 rounded"
 };
 var _hoisted_9 = {
   "class": "min-w-full text-sm align-middle whitespace-nowrap"
@@ -20296,15 +20297,15 @@ var _hoisted_9 = {
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", {
   "class": "border-b border-gray-200"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "p-3 pl-6 text-gray-700 bg-gray-100 font-semibold text-sm tracking-wider uppercase text-left"
+  "class": "p-3 pl-6 text-sm font-semibold tracking-wider text-left text-gray-700 uppercase bg-gray-100"
 }, " Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "p-3 text-gray-700 bg-gray-100 font-semibold text-sm tracking-wider uppercase text-left"
+  "class": "p-3 text-sm font-semibold tracking-wider text-left text-gray-700 uppercase bg-gray-100"
 }, " Email "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "p-3 text-gray-700 bg-gray-100 font-semibold text-sm tracking-wider uppercase text-left"
+  "class": "p-3 text-sm font-semibold tracking-wider text-left text-gray-700 uppercase bg-gray-100"
 }, " Phone "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "p-3 text-gray-700 bg-gray-100 font-semibold text-sm tracking-wider uppercase text-left"
+  "class": "p-3 text-sm font-semibold tracking-wider text-left text-gray-700 uppercase bg-gray-100"
 }, " City "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "p-3 text-gray-700 bg-gray-100 font-semibold text-sm tracking-wider uppercase text-center"
+  "class": "p-3 text-sm font-semibold tracking-wider text-center text-gray-700 uppercase bg-gray-100"
 }, " Actions ")])], -1
 /* HOISTED */
 );
@@ -20328,11 +20329,11 @@ var _hoisted_16 = {
   "class": "p-3 text-right"
 };
 var _hoisted_17 = {
-  "class": "flex gap-3 justify-center"
+  "class": "flex justify-center gap-3"
 };
 
 var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
-  "class": "hi-solid hi-pencil inline-block w-4 h-4",
+  "class": "inline-block w-4 h-4 hi-solid hi-pencil",
   fill: "currentColor",
   viewBox: "0 0 20 20",
   xmlns: "http://www.w3.org/2000/svg"
@@ -20348,7 +20349,7 @@ var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 
 var _hoisted_20 = {
   key: 0,
-  "class": "w-full p-5 lg:p-6 grow border-t"
+  "class": "w-full p-5 border-t lg:p-6 grow"
 };
 var _hoisted_21 = {
   "class": "flex flex-wrap -mb-1"
@@ -20363,7 +20364,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Contacts"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "\\contacts\\create",
-    "class": "inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-5 text-sm rounded border-indigo-700 bg-indigo-700 text-white hover:text-white hover:bg-indigo-800 hover:border-indigo-800 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-700 active:border-indigo-700"
+    "class": "inline-flex items-center justify-center px-3 py-2 space-x-2 text-sm font-semibold leading-5 text-white bg-indigo-700 border border-indigo-700 rounded focus:outline-none hover:text-white hover:bg-indigo-800 hover:border-indigo-800 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-700 active:border-indigo-700"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_5, _hoisted_6];
@@ -20384,7 +20385,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(contact.city), 1
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-      "class": "inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-2 py-1 leading-5 text-sm rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none",
+      "class": "inline-flex items-center justify-center px-2 py-1 space-x-2 text-sm font-semibold leading-5 text-gray-800 bg-white border border-gray-300 rounded shadow-sm focus:outline-none hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none",
       href: "/contacts/".concat(contact.id, "/edit")
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -20401,13 +20402,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ))])])])]), $props.contacts.links.length > 3 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.contacts.links, function (link, key) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [link.url === null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: key,
-      "class": "mb-1 mr-1 px-4 py-3 text-gray-400 text-sm leading-4 border rounded",
+      "class": "px-4 py-3 mb-1 mr-1 text-sm leading-4 text-gray-400 border rounded",
       innerHTML: link.label
     }, null, 8
     /* PROPS */
     , _hoisted_22)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
       key: "link-".concat(key),
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["mb-1 mr-1 px-4 py-3 focus:text-indigo-500 text-sm leading-4 hover:bg-white border focus:border-indigo-500 rounded", {
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["px-4 py-3 mb-1 mr-1 text-sm leading-4 border rounded focus:text-indigo-500 hover:bg-white focus:border-indigo-500", {
         'bg-white': link.active
       }]),
       href: link.url,

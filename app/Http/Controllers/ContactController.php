@@ -52,17 +52,19 @@ class ContactController extends Controller
      */
     public function store()
     {
-        Contact::create(Request::validate([
-            'first_name' => ['required', 'max:50'],
-            'last_name' => ['required', 'max:50'],
-            'email' => ['nullable', 'max:50', 'email'],
-            'phone' => ['nullable', 'max:50'],
-            'address' => ['nullable', 'max:150'],
-            'city' => ['nullable', 'max:50'],
-            'region' => ['nullable', 'max:50'],
-            'country' => ['nullable', 'max:2'],
-            'postal_code' => ['nullable', 'max:25'],
-        ]));
+        Contact::create(
+            Request::validate([
+                'first_name' => ['required', 'max:50'],
+                'last_name' => ['required', 'max:50'],
+                'email' => ['nullable', 'max:50', 'email'],
+                'phone' => ['nullable', 'max:50'],
+                'address' => ['nullable', 'max:150'],
+                'city' => ['nullable', 'max:50'],
+                'region' => ['nullable', 'max:50'],
+                'country' => ['nullable', 'max:50'],
+                'postal_code' => ['nullable', 'max:25'],
+            ])
+        );
 
         return Redirect::route('contacts')->with('success', 'Contact created.');
     }
@@ -111,19 +113,21 @@ class ContactController extends Controller
      */
     public function update(Contact $contact)
     {
-        $contact->update(Request::validate([
-            'first_name' => ['required', 'max:50'],
-            'last_name' => ['required', 'max:50'],
-            'email' => ['nullable', 'max:50', 'email'],
-            'phone' => ['nullable', 'max:50'],
-            'address' => ['nullable', 'max:150'],
-            'city' => ['nullable', 'max:50'],
-            'region' => ['nullable', 'max:50'],
-            'country' => ['nullable', 'max:2'],
-            'postal_code' => ['nullable', 'max:25'],
-        ]));
+        $contact->update(
+            Request::validate([
+                'first_name' => ['required', 'max:50'],
+                'last_name' => ['required', 'max:50'],
+                'email' => ['nullable', 'max:50', 'email'],
+                'phone' => ['nullable', 'max:50'],
+                'address' => ['nullable', 'max:150'],
+                'city' => ['nullable', 'max:50'],
+                'region' => ['nullable', 'max:50'],
+                'country' => ['nullable', 'max:2'],
+                'postal_code' => ['nullable', 'max:25'],
+            ])
+        );
 
-        return Redirect::back()->with('success', 'Contact updated.');
+        return Redirect::route('contacts')->with('success', 'Contact updated.');
     }
 
     /**
