@@ -11,6 +11,6 @@ class DashboardController extends Controller
     {
         return Inertia::render('Home', [
             'name' => auth()->user()->name,
-            ]);
+        ]);
     }
 }
