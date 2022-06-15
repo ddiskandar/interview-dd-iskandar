@@ -18,6 +18,18 @@
                 </Link>
             </div>
         </div>
+        <div class="w-full p-5 border-b border-gray-100 lg:p-6 grow">
+        <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center justify-center w-10 my-px ml-px text-gray-500 rounded-l pointer-events-none">
+            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="inline-block w-5 h-5 hi-solid hi-search"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+            </div>
+            <input class="block w-full py-2 pl-10 pr-3 leading-6 border border-gray-200 rounded "
+                v-model="form.search"
+                type="search"
+                placeholder="Search all contacts..."
+            >
+        </div>
+        </div>
 
         <div class="w-full p-5 lg:p-6 grow">
             <div class="min-w-full overflow-x-auto bg-white border border-gray-200 rounded">
@@ -68,6 +80,9 @@
                             </div>
                         </td>
                     </tr>
+                    <tr v-if="contacts.data.length === 0">
+                        <td class="px-6 py-4 border-t" colspan="5">No contacts found.</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -88,6 +103,8 @@
 <script>
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layout from '../../Shared/Layout';
+import pickBy from 'lodash/pickBy'
+import throttle from 'lodash/throttle'
 
 export default {
     components: {
@@ -96,7 +113,23 @@ export default {
     },
     layout: Layout,
     props : {
+        filters: Object,
         contacts : Object,
+    },
+    data() {
+        return {
+            form: {
+                search: this.filters.search,
+            }
+        }
+    },
+    watch: {
+        form: {
+        deep: true,
+            handler: throttle(function () {
+                this.$inertia.get('/contacts', pickBy(this.form), { preserveState: true, replace: true })
+            }, 150),
+        },
     },
 }
 </script>

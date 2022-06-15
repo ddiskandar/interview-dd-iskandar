@@ -20,8 +20,10 @@ class ContactController extends Controller
     public function index()
     {
         return Inertia::render('Contacts/Index', [
+            'filters' => Request::all('search'),
             'contacts' => Contact::query()
                 ->orderByName()
+                ->filter(Request::only('search'))
                 ->paginate(10)
                 ->withQueryString()
                 ->through(fn ($contact) => [
