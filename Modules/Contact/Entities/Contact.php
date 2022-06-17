@@ -1,15 +1,20 @@
 <?php
 
-namespace App\Models;
+namespace Modules\Contact\Entities;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Contact extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
+
+    protected static function newFactory()
+    {
+        return \Modules\Contact\Database\factories\ContactFactory::new();
+    }
 
     public function resolveRouteBinding($value, $field = null)
     {

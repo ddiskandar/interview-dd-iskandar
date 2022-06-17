@@ -24,11 +24,11 @@
                     <span>Dashboard</span>
                 </Link>
                 <Link
-                    href="/contacts"
+                    href="/contact"
                     class="px-3 py-2 text-sm font-medium hover:text-indigo-500 hover:bg-indigo-50 hover:border-indigo-50 active:bg-indigo-100 active:border-indigo-100 hover:rounded"
-                    :class="{'text-indigo-500 border rounded border-indigo-50 bg-indigo-50' : $page.url.startsWith('/contacts')}"
+                    :class="{'text-indigo-500 border rounded border-indigo-50 bg-indigo-50' : $page.url.startsWith('/contact')}"
                 >
-                    <span>Contacts</span>
+                    <span>Contact</span>
                 </Link>
             </nav>
             <!-- END Desktop Navigation -->

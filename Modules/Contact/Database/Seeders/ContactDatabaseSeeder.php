@@ -16,6 +16,6 @@ class ContactDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        \Modules\Contact\Entities\Contact::factory(100)->create();
     }
 }
