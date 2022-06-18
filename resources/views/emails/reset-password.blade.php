@@ -3,7 +3,7 @@
 
 You are receiving this email because we received a password request for your account!
 
-@component('mail::button', ['url' => route('reset.password.get', $token)])
+@component('mail::button', ['url' => 'http://' . $url .'/reset-password/'. $token])
 Click here to Reset Password
 @endcomponent
 

@@ -15,16 +15,18 @@ class SendResetPassword extends Mailable
 
     public $user;
     public $token;
+    public $url;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(User $user, $url)
     {
         $this->user = $user;
         $this->token = DB::table('password_resets')->where('email', $this->user->email)->first()->token;
+        $this->url = $url;
     }
 
     /**

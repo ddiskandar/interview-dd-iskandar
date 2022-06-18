@@ -33,7 +33,9 @@ class PasswordResetLinkController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        \Mail::to($user)->queue( new SendResetPassword($user));
+        $url = $request->getHttpHost();
+
+        \Mail::to($user)->queue( new SendResetPassword($user, $url));
 
         return back()->with('status', 'We have e-mailed your password reset link!');
     }

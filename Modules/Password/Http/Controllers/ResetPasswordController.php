@@ -13,6 +13,7 @@ class ResetPasswordController extends Controller
 {
     public function create($token) {
         $validToken = DB::table('password_resets')->where('token', $token)->first();
+
         abort_if(!$validToken, 404);
 
         return view('password::reset-password', ['token' => $token, 'email' => $validToken->email] );
