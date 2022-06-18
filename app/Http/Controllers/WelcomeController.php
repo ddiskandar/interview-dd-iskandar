@@ -11,10 +11,6 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $user = Contact::first();
-        dd($user);
-        dispatch(new EmailResetPassword($user));
-
         return 'Finished';
     }
 }
