@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Inertia\Inertia;
 
 class ResetPasswordController extends Controller
 {
@@ -16,7 +17,7 @@ class ResetPasswordController extends Controller
 
         abort_if(!$validToken, 404);
 
-        return view('password::reset-password', ['token' => $token, 'email' => $validToken->email] );
+        return Inertia::render('Password::Reset', ['token' => $token, 'email' => $validToken->email]);
     }
 
     public function store(Request $request)
